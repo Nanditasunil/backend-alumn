@@ -22,7 +22,12 @@ export const sendVerificationEmail = async (user, res) => {
 
   const token = _id + uuidv4();
 
-  const link = APP_URL + "users/verify/" + _id + "/" + token;
+  const link =
+    "https://nandita-backend-alumn.onrender.com/" +
+    "users/verify/" +
+    _id +
+    "/" +
+    token;
 
   //mail options
   const mailOptions = {
@@ -84,7 +89,12 @@ export const resetPasswordLink = async (user, res) => {
   const { _id, email } = user;
 
   const token = _id + uuidv4();
-  const link = APP_URL + "users/reset-password/" + _id + "/" + token;
+  const link =
+    "https://nandita-backend-alumn.onrender.com/" +
+    "users/reset-password/" +
+    _id +
+    "/" +
+    token;
 
   //mail options
 
